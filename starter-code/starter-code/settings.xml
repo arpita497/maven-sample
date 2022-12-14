@@ -18,7 +18,7 @@
 		<server>
 			<username>${repo.username}</username>
 			<password>${repo.password}</password>
-			<id>jfrog-snapshots</id>
+			<id>snapshots</id>
 		</server>
 	</servers>
 	
