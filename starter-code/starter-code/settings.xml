@@ -11,13 +11,13 @@
 	
 	<servers>
 		<server>
-			<username>${repo.username}</username>
-			<password>${repo.password}</password>
+			<username>arpita.patnaik497@gmail.com</username>
+			<password>cmVmdGtuOjAxOjAwMDAwMDAwMDA6ZG4xbURsMUw4V1ZnZW1Nb1pTTWN5VUVVOXRT</password>
 			<id>central</id>
 		</server>
 		<server>
-			<username>${repo.username}</username>
-			<password>${repo.password}</password>
+			<username>arpita.patnaik497@gmail.com</username>
+			<password>cmVmdGtuOjAxOjAwMDAwMDAwMDA6ZG4xbURsMUw4V1ZnZW1Nb1pTTWN5VUVVOXRT</password>
 			<id>snapshots</id>
 		</server>
 	</servers>
