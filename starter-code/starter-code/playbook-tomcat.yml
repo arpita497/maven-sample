@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: all
   tasks:
     - name: download tomcat server packages
       get_url:
