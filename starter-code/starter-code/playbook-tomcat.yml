@@ -13,9 +13,9 @@
         remote_src: yes
     - name: Copy the war file
       copy:
-        src: /starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
+        src: /home/ubuntu/jenkins/workspace/integrate-sonar/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
         dest: /usr/local/apache-tomcat-10.0.27/webapps/
-        remote_src: yes
+       # remote_src: yes
     - name: change tomcat port number
       shell: sed -i 's/port="8080"/port="9090"/' /usr/local/tomcat/conf/server.xml
     - name: Start Tomcat
