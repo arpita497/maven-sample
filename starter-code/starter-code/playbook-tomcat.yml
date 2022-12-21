@@ -5,16 +5,16 @@
     - name: download tomcat server packages
       get_url:
         url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
-        dest: /usr/local/
+        dest: /opt/
     - name: extract tomcat packages
       unarchive:
-        src: /usr/local/apache-tomcat-10.0.27.tar.gz
-        dest: /usr/local/
+        src: /opt/apache-tomcat-10.0.27.tar.gz
+        dest: /opt/
     - name: Copy the war file
       copy:
         src: /home/ubuntu/jenkins/workspace/integrate-sonar/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
-        dest: /usr/local/apache-tomcat-10.0.27/webapps/
+        dest: /opt/apache-tomcat-10.0.27/webapps/
     - name: change tomcat port number
-      shell: sed -i 's/port="8080"/port="9090"/' /usr/local/apache-tomcat-10.0.27/conf/server.xml
+      shell: sed -i 's/port="8080"/port="9090"/' /opt/apache-tomcat-10.0.27/conf/server.xml
     - name: Start Tomcat
-      shell: nohup /usr/local/apache-tomcat-10.0.27/bin/startup.sh
+      shell: nohup /opt/apache-tomcat-10.0.27/bin/startup.sh
