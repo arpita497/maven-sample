@@ -1,6 +1,5 @@
 ---
 - hosts: localhost
-  become: True
   tasks:
     - name: download tomcat server packages
       get_url:
