@@ -4,14 +4,16 @@
     - name: download tomcat server packages
       get_url:
         url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
-        dest: /opt/
+        dest: /usr/local
     - name: extract tomcat packages
       unarchive:
-        src: /opt/apache-tomcat-10.0.27.tar.gz
-        dest: /opt/
+        src: /usr/local/apache-tomcat-10.0.27.tar.gz
+        dest: /usr/local
+        remote_src: yes
     - name: Copy the war file
       copy:
-        src: /home/ubuntu/jenkins/workspace/integrate-sonar/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
-        dest: /opt/apache-tomcat-10.0.27/webapps/
+        src: /tmp/demo-4.0.0-SNAPSHOT.war
+        dest: /usr/local/apache-tomcat-10.0.27/webapps/
+        remote_src: yes
     - name: Start Tomcat
       shell: nohup /opt/apache-tomcat-10.0.27/bin/startup.sh
