@@ -13,7 +13,5 @@
       copy:
         src: /home/ubuntu/jenkins/workspace/integrate-sonar/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
         dest: /opt/apache-tomcat-10.0.27/webapps/
-    - name: change tomcat port number
-      shell: sed -i 's/port="8080"/port="9090"/' /opt/apache-tomcat-10.0.27/conf/server.xml
     - name: Start Tomcat
       shell: nohup /opt/apache-tomcat-10.0.27/bin/startup.sh
