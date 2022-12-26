@@ -13,7 +13,7 @@
         remote_src: yes
     - name: Copy the war file
       copy:
-        src: /home/ubuntu/jenkins/workspace/integrate-sonar/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
+        src: /var/lib/jenkins/workspace/ansible-pipeline/starter-code/starter-code/target/*.war
         dest: /opt/apache-tomcat-10.0.27/webapps/
         remote_src: yes
     - name: Start Tomcat
