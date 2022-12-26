@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   become: True
   tasks:
     - name: download tomcat server packages
@@ -10,12 +10,12 @@
       unarchive:
         src: /usr/local/apache-tomcat-10.0.27.tar.gz
         dest: /opt/
-        remote_src: yes
+        #remote_src: yes
     - name: Copy the war file
       copy:
         #src: /var/lib/jenkins/workspace/ansible-pipeline/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
         src: /var/lib/jenkins/workspace/demo-4.0.0-SNAPSHOT.war
         dest: /opt/apache-tomcat-10.0.27/webapps/
-        remote_src: yes
+        #remote_src: yes
     - name: Start Tomcat
       shell: nohup /opt/apache-tomcat-10.0.27/bin/startup.sh
