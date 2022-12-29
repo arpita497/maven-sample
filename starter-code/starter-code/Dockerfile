@@ -1,6 +1,7 @@
 FROM tomcat:8
 LABEL IMAGE= IMAGEDEMO
-COPY ./target/*.war
-/opt/apache-tomcat-10.0.27/webapps/
-EXPOSE 8080
+LABEL maintainer= "Arpita Patnaik"
+RUN sed -i 's/port="8080"/port="9090"/' /usr/local/tomcat/conf/server.xml
+COPY ./target/*.war /usr/local/tomcat/webapps/
+EXPOSE 9090
 CMD ["catalina.sh", "run"]
