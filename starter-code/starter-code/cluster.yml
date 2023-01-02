@@ -1,0 +1,41 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: eks-tomcat-app
+  region: ap-south-1
+  version: "1.20"
+
+
+vpc:
+  id: "vpc-017315c2d6071e0eb"  
+  cidr: "10.0.0.0/24"       
+  subnets:
+    public:
+      ap-south-1a:
+        id: "subnet-00df9f933056052d5"
+        cidr: "10.0.0.0/28"
+      
+      ap-south-1b:
+        id: "subnet-018307880266ebbcf"
+        cidr: "10.0.0.16/28"
+
+    private:
+      ap-south-1a:
+        id: "subnet-09aa3159aca69ef07"
+        cidr: "10.0.0.128/28"  
+
+      ap-south-1b:
+        id: "subnet-0c806d798f50bf3e1"
+        cidr: "10.0.0.144/28"  
+      
+
+nodeGroups:
+  - name: TestEKS
+    instanceType: t2.small
+    desiredCapacity: 1
+    ssh:
+      allow: false
+    privateNetworking: true
+
+
