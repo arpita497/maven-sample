@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: docker-ecr:latest 556304842495.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest
+        image: 556304842495.dkr.ecr.ap-south-1.amazonaws.com/docker-ecr:latest
         ports:
         - containerPort: 9090
