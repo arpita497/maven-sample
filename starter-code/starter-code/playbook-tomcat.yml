@@ -15,8 +15,7 @@
       copy:
         #src: /var/lib/jenkins/workspace/ansible-pipeline/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
         src: /var/lib/jenkins/workspace/ansible/starter-code/starter-code/target/demo-4.0.0-SNAPSHOT.war
-        #dest: /opt/apache-tomcat-10.0.27/webapps/
-        dest: /opt/
+        dest: /opt/apache-tomcat-10.0.27/webapps/
         #remote_src: yes
     - name: Start Tomcat
       shell: nohup /opt/apache-tomcat-10.0.27/bin/startup.sh
