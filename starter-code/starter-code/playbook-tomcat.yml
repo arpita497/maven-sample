@@ -1,7 +1,6 @@
 ---
 - hosts: localhost
-  become: True
-  become_user: ubuntu
+  become: yes
   tasks:
     - name: download tomcat server packages
       get_url:
