@@ -1,7 +1,7 @@
 ---
 - hosts: localhost
   become: true
-  become_user: ubuntu
+  become_user: ansible
   tasks:
     - name: download tomcat server packages
       get_url:
