@@ -21,6 +21,6 @@
         dest: /opt/apache-tomcat-10.0.27/webapps/
         #remote_src: yes
     - name: change tomcat port number
-      shell: sed -i 's/port="8080"/port="9090"/' /usr/local/tomcat/conf/server.xml
+      shell: sed -i 's/port="8080"/port="9090"/' /opt/apache-tomcat-10.0.27/conf/server.xml
     - name: Start Tomcat
       shell: nohup /opt/apache-tomcat-10.0.27/bin/startup.sh
